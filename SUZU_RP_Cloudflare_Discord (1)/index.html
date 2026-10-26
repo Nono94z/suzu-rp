@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SUZU — Candidature RP</title>
+<style>
+:root{--violet:#7552c8;--deep:#382568;--lav:#eee5ff;--ink:#242033;--muted:#6c6679;--line:#ded8e8;--gold:#e6c77a}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#eee6ff,#d8d0f3);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);padding:22px 14px 50px}
+.wrap{max-width:940px;margin:auto}.banner{min-height:220px;border-radius:18px;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center;padding:28px;background:radial-gradient(ellipse at 20% 20%,#f7dca0aa,transparent 32%),radial-gradient(ellipse at 85% 75%,#82d5f2aa,transparent 35%),linear-gradient(120deg,#1b244e,#6947a7 50%,#e6b978);border:1px solid #ffffffaa;box-shadow:0 8px 24px #38256825;position:relative}
+.banner:before,.banner:after{content:'✦';position:absolute;color:#fff3c4;font-size:42px;text-shadow:0 0 20px #fff}.banner:before{left:9%;top:20%}.banner:after{right:10%;bottom:18%;font-size:30px}.banner h1{margin:0;font-size:clamp(54px,10vw,100px);letter-spacing:.13em;color:#fff8df;text-shadow:0 4px 0 #493274,0 9px 22px #17122f; font-weight:900}.banner p{margin:8px 0 0;color:#fff;font-weight:600;letter-spacing:.12em}
+.intro,.section,.question{background:#fff;border:1px solid #d9d4e1;border-radius:14px;margin-top:18px;overflow:hidden;box-shadow:0 2px 5px #2f1d5010}.intro{border-top:7px solid var(--violet);padding:26px 30px}.intro h2{font-size:clamp(25px,4vw,38px);margin:0 0 7px;color:var(--deep)}.intro p{margin:0;color:var(--muted)}.section-head{background:linear-gradient(100deg,var(--violet),#9d6bd9);color:#fff;padding:14px 24px;font-weight:800;font-size:20px}.question{padding:25px 28px}.question label,.qtitle{display:block;font-size:18px;font-weight:750;margin-bottom:18px}.required{color:#cf3c51}.hint{color:var(--muted);font-size:14px;margin-top:-10px;margin-bottom:16px}.field{width:100%;border:0;border-bottom:2px solid var(--line);padding:10px 2px;font:inherit;outline:none;background:transparent;border-radius:0}.field:focus{border-color:var(--violet)}textarea.field{min-height:110px;resize:vertical;border:1px solid var(--line);border-radius:9px;padding:12px}.choices{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.choice{display:flex;align-items:flex-start;gap:12px;border:1px solid var(--line);border-radius:11px;padding:14px;cursor:pointer;transition:.15s;background:#fff}.choice:hover{border-color:var(--violet);background:#faf7ff}.choice:has(input:checked){border-color:var(--violet);background:#f2eaff;box-shadow:0 0 0 1px var(--violet)}.choice input{accent-color:var(--violet);margin-top:4px;width:18px;height:18px}.region-icon{font-size:25px;line-height:1.1}.choice strong{display:block}.choice small{color:var(--muted)}.actions{display:flex;align-items:center;gap:12px;margin-top:22px;flex-wrap:wrap}.btn{border:0;border-radius:9px;padding:13px 24px;font:inherit;font-weight:750;cursor:pointer}.btn-main{background:var(--violet);color:white;box-shadow:0 3px 8px #3b246b30}.btn-light{background:white;color:var(--violet);border:1px solid var(--line)}.note{font-size:13px;color:var(--muted);margin-top:18px}.success{display:none;text-align:center;padding:35px 20px}.success h2{color:var(--deep)}.footer{text-align:center;color:#655b7b;font-size:13px;margin-top:20px}@media(max-width:540px){body{padding:12px 9px 30px}.question{padding:20px}.intro{padding:22px}.banner{min-height:170px}}
+</style></head>
+<body><main class="wrap">
+<header class="banner"><div><h1>SUZU</h1><p>GENSHIN IMPACT · CANDIDATURE RP</p></div></header>
+<section class="intro"><h2>Whitelist écrite SUZU RP</h2><p>Prends ton temps pour présenter ton personnage et ton projet RP. Les champs marqués d’un <span class="required">*</span> sont obligatoires.</p></section>
+<form id="applyForm" name="suzu-candidature" method="POST" action="/api/submit">
+
+<div hidden aria-hidden="true"><label>Ne remplis pas ce champ : <input name="website" tabindex="-1" autocomplete="off"></label></div>
+<div class="section"><div class="section-head">I. Informations générales</div>
+<div class="question"><label for="discord">Pseudo Discord <span class="required">*</span></label><input class="field" id="discord" name="discord" placeholder="Ex. : Voyageur#0000" required></div>
+<div class="question"><label for="genshin">Pseudo Genshin Impact</label><input class="field" id="genshin" name="genshin" placeholder="Ton pseudo Genshin Impact"></div>
+<div class="question"><label for="age">Âge <span class="required">*</span></label><input class="field" id="age" name="age" type="number" min="1" max="120" placeholder="Ton âge" required></div>
+<div class="question"><label for="experience">Depuis combien de temps fais-tu du RP et sur quels serveurs as-tu déjà joué ? <span class="required">*</span></label><textarea class="field" id="experience" name="experience" placeholder="Décris ton expérience, même si tu débutes." required></textarea></div>
+</div>
+<div class="section"><div class="section-head">II. Ton personnage</div>
+<div class="question"><label for="character">Personnage souhaité <span class="required">*</span></label><textarea class="field" id="character" name="character" placeholder="Écris librement le personnage que tu souhaites jouer : son nom, sa personnalité, son apparence, ses pouvoirs, ses envies…" required></textarea></div>
+<div class="question"><div class="qtitle">Région / clan souhaité <span class="required">*</span></div><p class="hint">Choisis la région de Teyvat à laquelle ton personnage sera rattaché.</p>
+<div class="choices">
+<label class="choice"><input type="radio" name="clan" value="Mondstadt" required><span class="region-icon">🌬️</span><span><strong>Mondstadt</strong><small>Anémo · La cité de la liberté</small></span></label>
+<label class="choice"><input type="radio" name="clan" value="Liyue"><span class="region-icon">🪨</span><span><strong>Liyue</strong><small>Géo · Le port des contrats</small></span></label>
+<label class="choice"><input type="radio" name="clan" value="Inazuma"><span class="region-icon">⚡</span><span><strong>Inazuma</strong><small>Électro · Les îles de l’éternité</small></span></label>
+<label class="choice"><input type="radio" name="clan" value="Sumeru"><span class="region-icon">🌿</span><span><strong>Sumeru</strong><small>Dendro · La terre de la sagesse</small></span></label>
+<label class="choice"><input type="radio" name="clan" value="Fontaine"><span class="region-icon">💧</span><span><strong>Fontaine</strong><small>Hydro · La nation de la justice</small></span></label>
+<label class="choice"><input type="radio" name="clan" value="Natlan"><span class="region-icon">🔥</span><span><strong>Natlan</strong><small>Pyro · La nation des guerriers</small></span></label>
+<label class="choice"><input type="radio" name="clan" value="Nod-Krai"><span class="region-icon">🌙</span><span><strong>Nod-Krai</strong><small>Région du nord de Teyvat</small></span></label>
+<label class="choice"><input type="radio" name="clan" value="Snezhnaya"><span class="region-icon">❄️</span><span><strong>Snezhnaya</strong><small>Cryo · La nation de la Tsarine</small></span></label>
+</div></div>
+<div class="question"><label for="objectifs">Objectifs du personnage <span class="required">*</span></label><p class="hint">Explique tes objectifs à court, moyen et long terme, et pourquoi ton personnage veut les atteindre.</p><textarea class="field" id="objectifs" name="objectifs" placeholder="Court terme : …\nMoyen terme : …\nLong terme : …" required></textarea></div>
+<div class="question"><label for="background">Histoire / background du personnage <span class="required">*</span></label><p class="hint">Raconte son passé, son entourage, ce qui l’a construit et ce qui le pousse à avancer.</p><textarea class="field" id="background" name="background" minlength="30" placeholder="Écris l'histoire de ton personnage…" required></textarea></div>
+<div class="question"><label for="discover">Comment as-tu connu le serveur ? <span class="required">*</span></label><input class="field" id="discover" name="discover" placeholder="Ex. : un ami, Discord, une vidéo…" required></div>
+</div>
+<div class="actions"><button class="btn btn-main" type="submit">Envoyer la candidature ✦</button><button class="btn btn-light" type="reset">Effacer le formulaire</button></div>
+<p class="note">Les candidatures seront envoyées au salon Discord configuré par l’administrateur.</p>
+</form>
+<section class="intro success" id="success" aria-live="polite"><h2>✦ Candidature préparée ! ✦</h2><p>Merci d’avoir rempli le formulaire SUZU RP. Cette maquette ne transmet pas les réponses : copie-les dans ton formulaire officiel si nécessaire.</p><button class="btn btn-main" id="backBtn" type="button">Revoir mes réponses</button></section>
+<div class="footer">SUZU RP · Un voyage commence par un premier pas à Teyvat ✦</div>
+</main><script>
+// Envoi classique au endpoint sécurisé /api/submit.
+const form=document.getElementById('applyForm'),success=document.getElementById('success');
+document.getElementById('backBtn').addEventListener('click',()=>{success.style.display='none';form.style.display='block';form.scrollIntoView({behavior:'smooth',block:'start'});});
+</script></body></html>
